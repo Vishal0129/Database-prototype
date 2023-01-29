@@ -38,24 +38,18 @@ FILE *fp;
     {
         int count=0,isName,isPasswd,isPresent;
         printf("File Opened\n");
-        // printf("%s\n",argv[2]);
-        // printf("%s\n",argv[3]);
+
         while(fgets(line,bufferSize,fp)!=NULL)
         {
                 
             name=strtok(line," ");
-            //printf("%s\n",name);
+
             isName = strcmp(username,name);
-            //passwd=strtok(NULL," ");
-            //passwd[strlen(passwd)-1]='\0';
-            //printf("%s\n",passwd);
-            //isPasswd = strcmp(password,passwd);
-            // printf("%s%s\n",name,passwd);
-            // printf("%d %d\n",isName,isPasswd);
+
            
             if(isName==0)
             {
-                //printf("Valid");
+
                 return 1;
             }
             else
@@ -64,7 +58,6 @@ FILE *fp;
                 
         }
         fclose(fp);
-        //printf("NOT Valid");
         return 0;
     }
 }
@@ -80,20 +73,18 @@ FILE *fp;
     {
         int count=0,isName,isPasswd,isPresent;
         printf("File Opened\n");
-        // printf("%s\n",argv[2]);
-        // printf("%s\n",argv[3]);
+
         while(fgets(line,bufferSize,fp)!=NULL)
         {
                 
             name=strtok(line," ");
-            //printf("%s\n",name);
+
             isName = strcmp(username,name);
             passwd=strtok(NULL," ");
             passwd[strlen(passwd)-1]='\0';
-            //printf("%s\n",passwd);
+
             isPasswd = strcmp(password,passwd);
-            // printf("%s%s\n",name,passwd);
-            // printf("%d %d\n",isName,isPasswd);
+
            
             if(isName==0 && isPasswd==0)
             {
